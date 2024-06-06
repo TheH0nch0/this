@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta http-equiv="refresh" content="20;url={{ url_for('index') }}"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">A Website for Devious Memes</h1>
+        <div class="meme-card">
+            <div class="meme-image">
+                <img src="{{ meme_pic }}" alt="Meme">
+            </div>
+            <div class="meme-details">
+                <p class="subreddit"><i class="fas fa-bookmark"></i> Current Subreddit: {{ subreddit }}</p>
+                <p class="refresh-note"><i class="fas fa-info-circle"></i> This meme will refresh in 20 seconds</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
